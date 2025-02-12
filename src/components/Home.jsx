@@ -10,7 +10,7 @@ const Home = () => {
     <div className="bg-white dark:bg-night-100 text-gray-900 dark:text-gray-600">
       <Navbar />
       <Section1 /> {/* Corrected component name */}
-      <footer className="bg-white p-4 text-center mt-16">
+      <footer className="bg-white p-2 text-center mt-16">
               <div className="container mx-auto">
                 <p className="font-sans text-sm md:text-base text-gray-700">&copy; {new Date().getFullYear()} Pulse Life. All rights reserved.</p>
                 <div className="flex justify-center space-x-6 mt-3">
