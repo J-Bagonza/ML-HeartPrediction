@@ -36,14 +36,14 @@ const Section1 = () => {
             Predict your chance of having a heart disease by machine learning because prevention is better than cure!.
           </p>
 
-          {/* Read More Button */}
+          {/* calculator Button */}
           <button 
-            className="px-6 py-3 bg-red-300 text-green-600 font-bold rounded-lg hover:bg-gray-800 transition flex items-center"
-            onClick={() => navigate('/heart-disease-calculator')} // Navigate on click
-          >
-            <FaHeart className="text-red-600 mr-2" />
-            Calculator
-          </button>
+  className="px-9 py-2.5 bg-red-300 text-green-600 font-bold text-lg rounded-lg hover:bg-gray-800 transition flex items-center"
+  onClick={() => navigate('/heart-disease-calculator')} // Navigate on click
+>
+  <FaHeart className="text-red-600 mr-2" />
+  Calculator
+</button>
         </div>
 
         {/* Right Content: Main Image */}
