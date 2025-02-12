@@ -49,14 +49,26 @@ const Section1 = () => {
         {/* Right Content: Main Image */}
         <div className="relative flex-1 flex flex-col items-center justify-center mt-8 sm:mt-0">
           
-          {/* Pulse2 Image Positioned Behind the Main Image on the Left Side (Hidden on Small Screens) */}
-          <img src={pulse2} alt="Heart Pulse Left" className="hidden sm:block absolute bottom-16 sm:bottom-20 left-4 w-32 sm:w-48 md:w-64 rounded-full object-cover z-0" />
+          {/* Pulse2 Image Positioned Behind the Main Image on the Left Side (Visible on All Screens) */}
+          <img 
+            src={pulse2} 
+            alt="Heart Pulse Left" 
+            className="absolute bottom-20 left-4 w-32 sm:w-48 md:w-64 rounded-full object-cover z-0" 
+          />
 
           {/* Main Sample Image */}
-          <img src={sample} alt="Main Sample" className="w-3/4 sm:w-2/3 md:w-1/2 rounded-full object-cover z-10 mb-6 sm:mb-0" />
+          <img 
+            src={sample} 
+            alt="Main Sample" 
+            className="w-3/4 sm:w-2/3 md:w-1/2 rounded-full object-cover z-10 mb-6 sm:mb-0" 
+          />
 
-          {/* Pulse2 Image Positioned Behind the Main Image on the Right Side, Flipped (Hidden on Small Screens) */}
-          <img src={pulse2} alt="Heart Pulse Right" className="hidden sm:block absolute bottom-16 sm:bottom-20 right-4 w-32 sm:w-48 md:w-64 rounded-full object-cover z-0 transform scale-x-[-1]" />
+          {/* Pulse2 Image Positioned Behind the Main Image on the Right Side, Flipped (Invisible on Small Screens) */}
+          <img 
+            src={pulse2} 
+            alt="Heart Pulse Right" 
+            className="hidden sm:block absolute bottom-20 right-4 w-32 sm:w-48 md:w-64 rounded-full object-cover z-0 transform scale-x-[-1]" 
+          />
         </div>
       </div>
     </div>
