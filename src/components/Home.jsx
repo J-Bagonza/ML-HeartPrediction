@@ -1,30 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
 import Navbar from './Navbar';
 import Section1 from './section1'; // Updated component name
 import { FaInstagram, FaFacebook, FaTwitter } from "react-icons/fa";
 
 const Home = () => {
-  const [restaurants, setRestaurants] = useState([]);
-
-  useEffect(() => {
-    axios.get('/api/restaurants')
-      .then(response => {
-        setRestaurants(response.data);
-      })
-      .catch(error => {
-        console.error('There was an error fetching the restaurants!', error);
-      });
-  }, []);
-
-  // Dummy data for testing (without images)
-  const dummyRestaurants = [
-    { id: 1, name: "Restaurant 1" },
-    { id: 2, name: "Restaurant 2" },
-    { id: 3, name: "Restaurant 3" },
-    { id: 4, name: "Restaurant 4" },
-    { id: 5, name: "Restaurant 5" },
-  ];
+  const [] = useState([]);
 
   return (
     <div className="bg-white dark:bg-night-100 text-gray-900 dark:text-gray-600">
