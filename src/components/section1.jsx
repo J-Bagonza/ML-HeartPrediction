@@ -19,7 +19,7 @@ const Section1 = () => {
           <div className="flex items-center space-x-2 mb-4">
             <img src={pulseLogo} alt="Pulse Life" className="w-14 h-14 sm:w-16 sm:h-16 md:w-26 md:h-22" />
             <h3 className="text-xl sm:text-2xl font-bold">
-              <span className="text-red-600">Heart</span> - <span className="text-green-600">Disease Prediction</span>
+              <span className="text-red-600">Heart</span> <span className="text-green-600">Disease Prediction</span>
             </h3>
           </div>
 
@@ -53,7 +53,7 @@ const Section1 = () => {
           <img 
             src={pulse2} 
             alt="Heart Pulse Left" 
-            className="absolute bottom-20 left-4 w-32 sm:w-48 md:w-64 rounded-full object-cover z-0" 
+            className="absolute bottom-20 left-4 w-32 sm:w-52 md:w-64 rounded-full object-cover z-0" 
           />
 
           {/* Main Sample Image */}
