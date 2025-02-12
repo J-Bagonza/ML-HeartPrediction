@@ -44,11 +44,11 @@ const Contact = () => {
   return (
     <div className="min-h-screen bg-gray-100 dark:bg-night-200 flex flex-col items-center py-10 flex-grow">
       {/* Updated Heading */}
-      <h1 className="text-4xl font-bold text-gray-900 dark:text-white mt-16 mb-6">
+      <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mt-16 mb-6 text-center">
         Talk to us more at <span className="text-red-600">Pulse-Life</span>
       </h1>
 
-      <p className="text-lg text-gray-700 dark:text-gray-200 text-center max-w-2xl mb-10">
+      <p className="text-base sm:text-lg text-gray-700 dark:text-gray-200 text-center max-w-3xl mb-10 px-4">
         Have any questions or feedback? We would love to hear from you! Reach
         out to us using the form below or via our contact details.
       </p>
@@ -56,7 +56,7 @@ const Contact = () => {
       <div className="w-full max-w-xl bg-white rounded-lg shadow-lg p-6">
         <form className="space-y-6" onSubmit={handleSubmit}>
           <div>
-            <label htmlFor="name" className="block text-sm font-medium text-gray-700">
+            <label htmlFor="name" className="block text-sm sm:text-base font-medium text-gray-700">
               Full Name
             </label>
             <input
@@ -72,7 +72,7 @@ const Contact = () => {
           </div>
 
           <div>
-            <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+            <label htmlFor="email" className="block text-sm sm:text-base font-medium text-gray-700">
               Email Address
             </label>
             <input
@@ -88,7 +88,7 @@ const Contact = () => {
           </div>
 
           <div>
-            <label htmlFor="message" className="block text-sm font-medium text-gray-700">
+            <label htmlFor="message" className="block text-sm sm:text-base font-medium text-gray-700">
               Message
             </label>
             <textarea
@@ -106,7 +106,7 @@ const Contact = () => {
           {/* Updated "Send Message" Button */}
           <button
             type="submit"
-            className="w-full flex justify-center items-center gap-2 py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500"
+            className="w-full flex justify-center items-center gap-2 py-2 px-4 border border-transparent rounded-md shadow-sm text-sm sm:text-base font-medium text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500"
             disabled={isSending}
           >
             {isSending ? (
@@ -125,10 +125,10 @@ const Contact = () => {
       </div>
 
       <div className="mt-10 text-center">
-        <p className="text-xl text-gray-700 dark:text-gray-200">
+        <p className="text-xl sm:text-2xl text-gray-700 dark:text-gray-200">
           Or reach out to us directly:
         </p>
-        <p className="text-sm text-gray-700 dark:text-gray-200 mt-3">
+        <p className="text-sm sm:text-base text-gray-700 dark:text-gray-200 mt-3">
           Phone: +123 456 789
         </p>
         <p className="mt-4">
@@ -136,7 +136,7 @@ const Contact = () => {
             href="https://wa.me/123456789"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-green-600 hover:underline text-sm"
+            className="text-green-600 hover:underline text-sm sm:text-base"
           >
             Chat with us on WhatsApp
           </a>

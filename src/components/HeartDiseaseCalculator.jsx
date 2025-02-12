@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom"; // Import navigation hook
+import { useNavigate } from "react-router-dom"; 
 
 const HeartDiseaseCalculator = ({ userName }) => {
   const [formData, setFormData] = useState({
@@ -15,20 +15,34 @@ const HeartDiseaseCalculator = ({ userName }) => {
     antiHypertensive: "",
     lipidLowering: "",
   });
-
+  const [prediction, setPrediction] = useState(null);
   const [notification, setNotification] = useState("");
-  const navigate = useNavigate(); // Initialize navigation
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Form Data Submitted:", formData);
-    setNotification("Calculation complete! Please click the View Analytics button.");
     
+    // Send data to backend (ChatGPT)
+    try {
+      const response = await fetch('/api/calculate-heart-disease', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+      const data = await response.json();
+      setPrediction(data.prediction);
+      setNotification("Calculation complete! Please click the View Analytics button.");
+    } catch (error) {
+      setNotification("An error occurred. Please try again.");
+    }
+
     // Remove notification after 5 seconds
     setTimeout(() => {
       setNotification("");
@@ -37,13 +51,12 @@ const HeartDiseaseCalculator = ({ userName }) => {
 
   return (
     <div className="min-h-screen bg-gray-100 flex flex-col items-center py-10 px-4">
-  {/* Title */}
-  <h1 className="text-3xl font-bold text-black text-center mt-16">
-    Welcome <span className="text-green-600">{userName}</span> to our Heart Disease Prediction Calculator.
-  </h1>
-  <p className="text-lg font-medium text-gray-700 text-center mt-2">
-    Please enter details in the fields below to get your prediction.
-  </p>
+      <h1 className="text-3xl font-bold text-black text-center mt-16">
+        Welcome <span className="text-green-600">{userName}</span> to our Heart Disease Prediction Calculator.
+      </h1>
+      <p className="text-lg font-medium text-gray-700 text-center mt-2">
+        Please enter details in the fields below to get your prediction.
+      </p>
 
       <form className="bg-white shadow-md rounded-lg p-6 w-full max-w-2xl space-y-4" onSubmit={handleSubmit}>
         {/* Sex */}
@@ -120,16 +133,14 @@ const HeartDiseaseCalculator = ({ userName }) => {
           </button>
           <button
             type="button"
-            onClick={() => navigate("/analytics")} // Navigate to Analytics Page
+            onClick={() => navigate("/analytics", { state: { formData, prediction } })}
             className="px-6 py-3 bg-red-600 text-white font-bold rounded-lg hover:bg-red-700"
           >
             View Analytics
           </button>
         </div>
       </form>
-      
     </div>
-
   );
 };
 

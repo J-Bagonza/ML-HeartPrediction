@@ -18,7 +18,7 @@ const About = () => {
           <h1 className="absolute text-gray-300 text-9xl font-bold -z-10 top-0 transform -translate-y-1/2">01</h1>
           <h2 className="text-red-500 text-2xl font-bold">Pulse-life</h2>
           <h3 className="text-gray-800 text-sm uppercase font-semibold mb-4">About us - Heart Disease Prediction</h3>
-          <p className="text-gray-600 mb-6">
+          <p className="text-gray-600 mb-6 text-sm md:text-base">
             Pulse Life is dedicated to helping people lead healthier lives by providing insights on heart health, prevention, and disease management. Heart disease is the No. 1 killer worldwide, and stroke ranks second globally. Even when those conditions don’t result in death, they cause disability and diminish quality of life. We want to see a world free of cardiovascular diseases and stroke.
           </p>
           <button className="bg-black text-white px-6 py-3 rounded-lg hover:bg-gray-800 transition" onClick={() => navigate("/pulse")}>
@@ -36,7 +36,7 @@ const About = () => {
           <h1 className="absolute text-gray-300 text-9xl font-bold -z-10 top-0 transform -translate-y-1/2">02</h1>
           <h2 className="text-red-500 text-2xl font-bold">The Exercise Advantage</h2>
           <h3 className="text-gray-800 text-sm uppercase font-semibold mb-4">Sweat for a stronger heart</h3>
-          <p className="text-gray-600 mb-6">
+          <p className="text-gray-600 mb-6 text-sm md:text-base">
             Regular physical activity is a powerful tool in preventing heart disease. Exercise improves cardiovascular health by reducing blood pressure, lowering cholesterol levels, and maintaining a healthy weight. Incorporating just 30 minutes of moderate exercise, like brisk walking, into your daily routine can significantly enhance heart health and longevity.
           </p>
           <button className="bg-black text-white px-6 py-3 rounded-lg hover:bg-gray-800 transition" onClick={() => navigate("/exercise")}>
@@ -54,7 +54,7 @@ const About = () => {
           <h1 className="absolute text-gray-300 text-9xl font-bold -z-10 top-0 transform -translate-y-1/2">03</h1>
           <h2 className="text-red-500 text-2xl font-bold">Healthy for Good</h2>
           <h3 className="text-gray-800 text-sm uppercase font-semibold mb-4">Your path to a healthier tomorrow</h3>
-          <p className="text-gray-600 mb-6">
+          <p className="text-gray-600 mb-6 text-sm md:text-base">
             From expert articles to personalized health tracking, Pulse Life provides ways to eat smart in order to maintain a healthy heart and cardiovascular system. We provide the best of healthy recipes with heart check certified foods.
           </p>
           <button className="bg-black text-white px-6 py-3 rounded-lg hover:bg-gray-800 transition" onClick={() => navigate("/healthy")}>

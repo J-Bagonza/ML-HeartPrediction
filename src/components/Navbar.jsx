@@ -66,7 +66,7 @@ const Navbar = () => {
             to="/signup"
             className="bg-red-100 text-gray-800 border border-transparent hover:border-green-600 hover:text-green-600 py-2 px-4 rounded-md"
           >
-            Sign Up
+            SignUp
           </Link>
           <div className="flex items-center space-x-2">
             <ThemeToggle className="w-4 h-4" />
@@ -185,7 +185,7 @@ const Navbar = () => {
                 onClick={() => setMenuOpen(false)}
                 className="bg-red-100 text-gray-800 border border-transparent hover:border-green-600 hover:text-green-600 py-2 px-4 rounded-md"
               >
-                Sign Up
+                SignUp
               </Link>
             </div>
 
