@@ -2,7 +2,7 @@ import React from "react";
 import { FaInstagram, FaFacebook, FaTwitter } from "react-icons/fa";
 import banner1 from "../assets/images/banner1.jpg";
 import banner2 from "../assets/images/banner2.jpg";
-import h1 from "../assets/images/h1.png";  
+import sample1 from "../assets/images/sample1.png";  
 
 const Healthy = () => {
   return (
@@ -10,7 +10,7 @@ const Healthy = () => {
       {/* Title Section with Yellow Line */}
       <div className="relative mb-12 flex items-center flex-wrap md:flex-nowrap">
               <div className="absolute left-0 w-2 h-20 bg-yellow-500"></div> {/* Red Line */}
-              <img src={h1} alt="Healthy Icon" className="w-16 md:w-24 h-auto mr-4 md:mr-6 ml-4" />
+              <img src={sample1} alt="Healthy Icon" className="w-16 md:w-24 h-auto mr-4 md:mr-6 ml-4" />
               <div className="relative z-10">
                 <h1 className="absolute text-gray-300 text-6xl md:text-8xl font-bold -z-10 top-0 transform -translate-y-1/2">
                   03

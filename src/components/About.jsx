@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom"; // Import useNavigate
 import { FaInstagram, FaFacebook, FaTwitter } from "react-icons/fa"; // Import social icons
 // Image for sections
 import h5 from "../assets/images/h5.png";
-import h2 from "../assets/images/h2.png";
+import sample1 from "../assets/images/sample1.png";
 import sample2 from "../assets/images/sample2.png";
 
 const About = () => {
@@ -49,7 +49,7 @@ const About = () => {
 
       {/* Template 3 */}
       <div className="relative flex flex-col md:flex-row items-center gap-10">
-        <img src={h2} alt="H2" className="w-full md:w-1/3 rounded-lg" />
+        <img src={sample1} alt="H2" className="w-full md:w-1/3 rounded-lg" />
         <div className="relative w-full md:w-1/2 text-center md:text-left">
           <h1 className="absolute text-gray-300 text-9xl font-bold -z-10 top-0 transform -translate-y-1/2">03</h1>
           <h2 className="text-red-500 text-2xl font-bold">Healthy for Good</h2>
